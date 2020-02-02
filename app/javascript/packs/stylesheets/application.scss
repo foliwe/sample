@@ -1,13 +1,26 @@
-@import "~bootstrap/scss/bootstrap"; // never forget the semicolon at the end
 @import "./_custom";
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700&display=swap');
+@import "~bootstrap/scss/bootstrap"; // never forget the semicolon at the end
 * {
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
     color: $font-color;
+}
+
+.nav-btn {
+    padding: 4px;
+    margin-top: 3px;
+}
+
+.dropdown-menu {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
+    .dropdown-item {
+        border-left: 2px solid #4b157e;
+    }
 }
