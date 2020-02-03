@@ -1,5 +1,7 @@
 @import "./_custom";
 @import "~bootstrap/scss/bootstrap"; // never forget the semicolon at the end
+@import "noty/lib/noty";
+@import "noty/lib/themes/relax";
 * {
     box-sizing: border-box;
 }
