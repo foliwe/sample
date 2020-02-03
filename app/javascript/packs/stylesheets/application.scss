@@ -1,26 +1,34 @@
 @import "./_custom";
 @import "~bootstrap/scss/bootstrap"; // never forget the semicolon at the end
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 18px;
+  font-size: 16px;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    color: $font-color;
+  font-family: "Montserrat", sans-serif;
+  color: $font-color;
 }
 
 .nav-btn {
-    padding: 4px;
-    margin-top: 3px;
+  padding: 4px;
+  margin-top: 3px;
 }
 
 .dropdown-menu {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
-    .dropdown-item {
-        border-left: 2px solid #4b157e;
-    }
+  top: 117%;
+  padding: 0;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
+  .dropdown-item {
+    font-size: 80%;
+    border-left: 2px solid $font-color;
+    padding: 15px;
+  }
+}
+.dropdown-divider {
+  margin: 0;
 }
