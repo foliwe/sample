@@ -1,34 +1,103 @@
-@import "./_custom";
-@import "~bootstrap/scss/bootstrap"; // never forget the semicolon at the end
-* {
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 16px;
-}
-
-body {
-  font-family: "Montserrat", sans-serif;
-  color: $font-color;
-}
-
-.nav-btn {
-  padding: 4px;
-  margin-top: 3px;
-}
-
-.dropdown-menu {
-  top: 117%;
-  padding: 0;
-
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
-  .dropdown-item {
-    font-size: 80%;
-    border-left: 2px solid $font-color;
-    padding: 15px;
-  }
-}
-.dropdown-divider {
-  margin: 0;
-}
+    @import "./_custom";
+    @import "~bootstrap/scss/bootstrap"; // never forget the semicolon at the end
+    * {
+        box-sizing: border-box;
+    }
+    
+    html {
+        font-size: 16px;
+    }
+    
+    body {
+        font-family: "Montserrat", sans-serif;
+        color: $font-color;
+    }
+    
+    .nav-btn {
+        padding: 4px;
+        margin-top: 3px;
+    }
+    
+    .dropdown-menu {
+        top: 117%;
+        padding: 0;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
+        .dropdown-item {
+            font-size: 80%;
+            border-left: 2px solid $font-color;
+            padding: 15px;
+        }
+    }
+    
+    .dropdown-divider {
+        margin: 0;
+    }
+    
+    .page_wrapper {
+        width: 100%;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 30% 1fr;
+        @media screen and (max-width: $break-medium) {
+            grid-template-columns: 1fr;
+            grid-template-rows: 20% 1fr;
+        }
+    }
+    
+    .signup_info {
+        background-color: #37318f;
+        color: #efefef;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        .signup_info_content {
+            text-align: center;
+            padding: 10px;
+            font-size: 95%;
+        }
+    }
+    
+    .signup_form {
+        width: 100%;
+        background-color: #eeeeee;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+    }
+    
+    .form_wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        ;
+        input {
+            width: 500px;
+            border-top: 0;
+        }
+        .no-outline:focus {
+            outline: none;
+        }
+        label {
+            font-size: 80%;
+        }
+        @media screen and (max-width: $break-medium) {
+            input {
+                width: 300px;
+            }
+        }
+    }
+    
+    .signup_form_header {
+        line-height: 18px;
+    }
+    
+    .signup_form_footer {
+        text-align: center;
+        font-size: 75%;
+        margin: 10px;
+        padding: 5px;
+    }
