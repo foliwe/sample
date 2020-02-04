@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  #Dashboard Actions
+
+  get '/dashboard',to: 'users#dashbaord'
+  post 'users/edit',to: 'users#update'
   root to: 'home#index'
   devise_for :users,
              path: '',path_names:{sign_up: 'register', sign_in: 'login', sign_out: 'logout',edit: 'profile'},

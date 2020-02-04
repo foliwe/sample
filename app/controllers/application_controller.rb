@@ -9,4 +9,8 @@ class ApplicationController < ActionController::Base
         added_attrs = [:full_name]
         devise_parameter_sanitizer.permit :sign_up, keys: added_attrs
       end
+
+      def after_sign_in_path_for(resource)
+        dashboard_path
+      end
 end

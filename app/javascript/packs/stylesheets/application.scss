@@ -1,3 +1,4 @@
+$font-color: #0080ff;
 @import "./_custom";
 @import "~bootstrap/scss/bootstrap"; // never forget the semicolon at the end
 @import "noty/lib/noty";
@@ -107,4 +108,31 @@ body {
     margin-top: 20vh;
     display: grid;
     justify-content: center;
+}
+
+.my_ul {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    a.dropdown-item {
+        text-transform: capitalize;
+    }
+    li:last-child {
+        border-right: 1px solid #efefef;
+    }
+    li {
+        text-align: center;
+        width: 100%;
+        border: 1px solid #efefef;
+        border-right: none;
+        border-bottom: none;
+        padding: 10px 0;
+        text-transform: uppercase;
+        font-size: 90%;
+    }
+}
+
+.no_gaps {
+    padding: 0;
+    margin: 0;
 }
