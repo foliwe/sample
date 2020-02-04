@@ -6,23 +6,45 @@
                     <figure class="img">
                         <%= image_tag('default_pic.png')%>
                     </figure>
+                    <button type="button" class="d-none btn btn-outline-dark btn-sm" id="upload_button">upload Photo</button>
                      <h5><%= current_user.full_name%></h5> 
                         <div class=""> <small>If you think, then you are alive</small> </div>
+                        <div class="ratings">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
                     <div class="card_top_details mt-3">
                         <div class="">Member Since</div>
-                        <div class="">June 2020</div>
+                        <div class=""> <%= current_user.created_at.strftime('%b %Y')%> </div>
                     </div>
                      <div class="card_top_details mt-3">
                         <div class=""> <i class="fas fa-map-marker-alt" ></i> From</div>
-                        <div class=""></div>
+                        <div class=""><%= current_user.from%> </div>
                     </div>
                      <div class="card_top_details mt-3">
                         <div class="">Online Status</div>
-                        <div class="">false</div>
+                        <div class="<%= current_user.status  ? 'online' : 'offline'%>"><%= current_user.status%> </div>
                     </div>
+                    
             </div>
-            <div class="card_middle">if</div>
-            <div class="card_bottom">IS </div>
+            
+            <div class="card_middle">
+                <div class="card_middle_details">
+                    <div class="card_label">About YourSelf </div>
+                    <div class=""><i class="fas fa-pencil-alt"></i></div>
+                 </div>
+                 <div class="card_middle_details">
+                    <div class="description pt-2"> Lorem ipsum dolor sit amet cons adipisicing elit. Laboriosam, deserunt voluptatem, quasi velit repellendus consequuntur deleniti adipisci reprehenderit modi.  </div>
+                 </div>
+                 <hr>
+                 <div class="card_middle_details">
+                    <div class="card_label">Language</div>
+                    <div class=""><i class="fas fa-pencil-alt"></i></div>
+                 </div>
+                 <div class="card_middle_details">
+                    <div class="description pt-2"><%= current_user.language%></div>
+                 </div>
+            </div>
+                  
             </div>
         </div>
         <div class="col-sm-8">
