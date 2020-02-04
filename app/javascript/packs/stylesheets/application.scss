@@ -1,4 +1,3 @@
-$font-color: #0080ff;
 @import "./_custom";
 @import "~bootstrap/scss/bootstrap"; // never forget the semicolon at the end
 @import "noty/lib/noty";
@@ -33,7 +32,7 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
     .dropdown-item {
         font-size: 90%;
-        border-left: 2px solid $font-color;
+        border-left: 2px solid #316ab4;
         padding: 15px;
     }
 }
