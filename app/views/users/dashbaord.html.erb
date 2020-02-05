@@ -2,7 +2,7 @@
     <div class="row mt-5">
         <div class="col-sm-4">
             <div class="card_wrapper bg-white">
-            <div class="card_top">
+              <div class="card_top">
                     <figure class="img">
                         <%= image_tag('default_pic.png')%>
                     </figure>
@@ -18,32 +18,70 @@
                     </div>
                      <div class="card_top_details mt-3">
                         <div class=""> <i class="fas fa-map-marker-alt" ></i> From</div>
-                        <div class=""><%= current_user.from%> </div>
+                        <div class=""><%= current_user.from%> <i class=" toggle fas fa-pencil-alt" aria-controls="user-from"></i></div>
                     </div>
+                        <div class="_from_edit">
+                            <%= form_for :user, url: users_edit_url(@user), action: :update, method: :post, html:{id: 'user-from',class: 'd-none'} do |f| %>
+                                <div class="form-group">
+                                    <%=f.text_field :from, autofocus: true, autocomplete: 'from', class:"form-control"%>
+                                    <a href="" class="toggle btn btn-secondary"  aria-controls="user-from">Cancel</a>
+                                     <%= f.submit "Save", class:"btn btn-outline-info"%>
+                                </div>
+                            <%end%>
+                        </div>
                      <div class="card_top_details mt-3">
                         <div class="">Online Status</div>
-                        <div class="<%= current_user.status  ? 'online' : 'offline'%>"><%= current_user.status%> </div>
+                        <div class="<%= current_user.status  ? 'online' : 'offline'%>"><%= current_user.status ? 'Online' : 'Offline'%> <i class=" toggle fas fa-pencil-alt" aria-controls="user-status "></i></div>
                     </div>
-                    
-            </div>
+
+                        <div class="_from_edit">
+                            <%= form_for :user, url: users_edit_url(@user), action: :update, method: :post, html:{id: 'user-status',class: 'd-none'} do |f| %>
+                                <div class="form-group">
+                                    <%=f.select(:status,options_for_select([["Online", true],["Offline" , false]]),{}, {class:"form-control"})%>
+                                    <a href="" class="toggle btn btn-secondary"  aria-controls="user-status">Cancel</a>
+                                        <%= f.submit "Save", class:"btn btn-outline-info"%>
+                                </div>
+                            <%end%>
+                        </div> 
+               </div>
             
-            <div class="card_middle">
-                <div class="card_middle_details">
-                    <div class="card_label">About YourSelf </div>
-                    <div class=""><i class="fas fa-pencil-alt"></i></div>
-                 </div>
-                 <div class="card_middle_details">
-                    <div class="description pt-2"> Lorem ipsum dolor sit amet cons adipisicing elit. Laboriosam, deserunt voluptatem, quasi velit repellendus consequuntur deleniti adipisci reprehenderit modi.  </div>
-                 </div>
-                 <hr>
-                 <div class="card_middle_details">
-                    <div class="card_label">Language</div>
-                    <div class=""><i class="fas fa-pencil-alt"></i></div>
-                 </div>
-                 <div class="card_middle_details">
-                    <div class="description pt-2"><%= current_user.language%></div>
-                 </div>
-            </div>
+                <div class="card_middle">
+                    <div class="card_middle_details">
+                        <div class="card_label">About YourSelf </div>
+                        <div class=""><i class=" toggle fas fa-pencil-alt" aria-controls="user-about"></i></div>
+                    </div>
+                    <div class="card_middle_details">
+                        <div class="description pt-2"> <%= current_user.about%></div>
+                    </div>
+                      
+                     <hr>
+                        <div class="_from_edit">
+                            <%= form_for :user, url: users_edit_url(@user), action: :update, method: :post, html:{id: 'user-about',class: 'd-none'} do |f| %>
+                                <div class="form-group">
+                                    <%=f.text_area :about, autofocus: true, autocomplete: 'from', class:"form-control"%>
+                                    <a href="" class="toggle btn btn-secondary"  aria-controls="user-about">Cancel</a>
+                                     <%= f.submit "Save", class:"btn btn-outline-info"%>
+                                </div>
+                            <%end%>
+                        </div>
+
+                    <div class="card_middle_details">
+                        <div class="card_label">Language</div>
+                        <div class=""><i class=" toggle fas fa-pencil-alt" aria-controls="user-language"></i></div>
+                    </div>
+                    <div class="card_middle_details">
+                        <div class="description pt-2"><%= current_user.language%></div>
+                    </div>
+                        <div class="_from_edit">
+                            <%= form_for :user, url: users_edit_url(@user), action: :update, method: :post, html:{id: 'user-language',class: 'd-none'} do |f| %>
+                                <div class="form-group">
+                                    <%=f.text_field :from, autofocus: true, autocomplete: 'language', class:"form-control"%>
+                                    <a href="" class="toggle btn btn-secondary"  aria-controls="user-language">Cancel</a>
+                                     <%= f.submit "Save", class:"btn btn-outline-info"%>
+                                </div>
+                            <%end%>
+                        </div>
+                </div>
                   
             </div>
         </div>
