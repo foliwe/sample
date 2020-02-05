@@ -4,9 +4,18 @@
             <div class="card_wrapper bg-white">
               <div class="card_top">
                     <figure class="img">
-                        <%= image_tag('default_pic.png')%>
+                        <%= image_tag avatar_url(current_user),class:"rounded-circle", id:"OpenAvatarUpload", data: {toggle: "tooltip", placement: "right" }, title: "Change Avatar"%>
                     </figure>
-                    <button type="button" class="d-none btn btn-outline-dark btn-sm" id="upload_button">upload Photo</button>
+                        <div class="file">
+                        
+                            <%= form_for :user, url: users_edit_url(@user), action: :update, method: :post, html:{id: 'user-file',class: ''} do |f| %>
+                        
+                                <%=f.file_field :avatar,class:"d-none",id:"avatarUpload", onChange: "this.form.submit();"%>
+                            
+                                
+                            <%end%>
+                        </div>
+
                      <h5><%= current_user.full_name%></h5> 
                         <div class=""> <small>If you think, then you are alive</small> </div>
                         <div class="ratings">
@@ -75,7 +84,7 @@
                         <div class="_from_edit">
                             <%= form_for :user, url: users_edit_url(@user), action: :update, method: :post, html:{id: 'user-language',class: 'd-none'} do |f| %>
                                 <div class="form-group">
-                                    <%=f.text_field :from, autofocus: true, autocomplete: 'language', class:"form-control"%>
+                                    <%=f.text_field :language, autofocus: true, autocomplete: 'language', class:"form-control"%>
                                     <a href="" class="toggle btn btn-secondary"  aria-controls="user-language">Cancel</a>
                                      <%= f.submit "Save", class:"btn btn-outline-info"%>
                                 </div>
@@ -93,3 +102,4 @@
     </div>
     
 </div>
+

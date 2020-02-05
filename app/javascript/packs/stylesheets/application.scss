@@ -195,3 +195,15 @@ body {
     display: inline-block;
     margin-right: 3px;
 }
+
+#OpenAvatarUpload {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+span {
+    img {
+        width: 30px;
+    }
+}

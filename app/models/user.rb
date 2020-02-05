@@ -6,7 +6,7 @@ class User < ApplicationRecord
   validates :full_name ,presence: true, length: {minimum:5, maximum:50}
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :omniauthable
-
+  has_one_attached :avatar
     def self.from_omniauth(auth)
       user = User.where(email: auth.info.email).first 
       if user 

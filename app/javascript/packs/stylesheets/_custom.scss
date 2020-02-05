@@ -13,3 +13,23 @@ $theme-colors: ("primary": #2980b9,
 "info":#3498db,
 "warning":#f5aa32,
 );
+.tooltip-inner {
+    background-color: #777777 !important;
+    font-family: "Montserrat", sans-serif;
+}
+
+.tooltip.bs-tooltip-right .arrow:before {
+    border-right-color: #777777 !important;
+}
+
+.tooltip.bs-tooltip-left .arrow:before {
+    border-right-color: #777777 !important;
+}
+
+.tooltip.bs-tooltip-bottom .arrow:before {
+    border-right-color: #00cc00 !important;
+}
+
+.tooltip.bs-tooltip-top .arrow:before {
+    border-right-color: #00cc00 !important;
+}

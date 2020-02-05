@@ -37,4 +37,8 @@ $(document).ready(() => {
         e.preventDefault();
         $('#' + e.target.getAttribute('aria-controls')).toggleClass('d-none');
     })
+
+    $('#OpenAvatarUpload').click(function() {
+        $('#avatarUpload').trigger('click');
+    });
 })
