@@ -1,0 +1,70 @@
+<div class="container">
+    <div class="row mt-5">
+
+        <div class="col-sm-4">
+            <div class="card_wrapper bg-white">
+
+              <div class="card_top">
+
+                    <figure class="img">
+                        <%= image_tag avatar_url(current_user),class:"rounded-circle"%>
+                    </figure>
+
+                     <h5><%= current_user.full_name%></h5> 
+
+                    <div class=""> <small>If you think, then you are alive</small> </div>
+
+                    <div class="ratings">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+
+                    <div class="card_top_details mt-3">
+                        <div class="">Member Since</div>
+                        <div class=""> <%= current_user.created_at.strftime('%b %Y')%> </div>
+                    </div>
+
+                     <div class="card_top_details mt-3">
+                        <div class=""> <i class="fas fa-map-marker-alt" ></i> From</div>
+                        <div class=""><%= current_user.from%> </div>
+                    </div>
+                        
+                     <div class="card_top_details mt-3">
+                        <div class="">Online Status</div>
+                        <div class="<%= current_user.status  ? 'online' : 'offline'%>"><%= current_user.status ? 'Online' : 'Offline'%> </div>
+                    </div>
+
+               </div>
+            
+                <div class="card_middle">
+
+                    <div class="">
+                        <div class="card_label">About YourSelf </div>
+                         <div class="description pt-2"> <%= current_user.about%></div>
+                    </div>
+                       
+
+                    <div class="">
+                        <div class="card_label">Language</div>
+                         <div class="description pt-2"><%= current_user.language%></div>
+                        
+                    </div>
+                    <div class="card_middle_details">
+                        
+                    </div>
+                        
+                </div>
+                  
+              </div>
+
+        </div>
+
+        <div class="col-sm-8">
+            <div class="card_wrapper bg-white">
+                world
+            </div>
+        </div>
+
+    </div>
+    
+</div>
+

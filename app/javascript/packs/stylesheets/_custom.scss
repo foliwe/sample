@@ -1,18 +1,22 @@
-@import "node_modules/bootstrap/scss/bootstrap";
-@import "node_modules/bootstrap/scss/variables";
+/* @import "node_modules/bootstrap/scss/bootstrap";
+@import "node_modules/bootstrap/scss/variables"; */
+
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700&display=swap");
 @import "./_color";
 @import "./_buttons";
 $break-small: 600px;
 $break-medium: 800px;
 $break-large: 1200px;
+
+/* 
 $theme-colors: ("primary": #2980b9,
 "danger": #e95a4b,
 "secondary":#e2e8ea,
 "success":#27ae60,
 "info":#3498db,
 "warning":#f5aa32,
-);
+); */
+
 .tooltip-inner {
     background-color: #777777 !important;
     font-family: "Montserrat", sans-serif;
