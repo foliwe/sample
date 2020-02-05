@@ -27,7 +27,7 @@
                     </div>
                      <div class="card_top_details mt-3">
                         <div class=""> <i class="fas fa-map-marker-alt" ></i> From</div>
-                        <div class=""><%= current_user.from%> <i class=" toggle fas fa-pencil-alt" aria-controls="user-from"></i></div>
+                        <div class=""><%= current_user.from%> <i class=" toggle fas fa-pencil-alt " aria-controls="user-from"></i></div>
                     </div>
                         <div class="_from_edit">
                             <%= form_for :user, url: users_edit_url(@user), action: :update, method: :post, html:{id: 'user-from',class: 'd-none'} do |f| %>
