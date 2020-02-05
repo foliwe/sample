@@ -144,6 +144,10 @@ body {
     margin: 0;
 }
 
+.card_wrapper_side {
+    padding: 20px 15px;
+}
+
 .card_wrapper {
     font-size: 95%;
     padding: 20px 0;
@@ -206,4 +210,24 @@ span {
     img {
         width: 30px;
     }
+}
+
+.reviews {}
+
+.review_box {
+    display: grid;
+    grid-template-columns: 100px 1fr auto;
+    .box_avatar {
+        text-align: center;
+    }
+}
+
+.box_avatar {
+    img {
+        width: 40%;
+    }
+}
+
+.fa-star {
+    color: #f39c12;
 }

@@ -31,7 +31,7 @@ document.addEventListener("turbolinks:load", () => {
     $('[data-toggle="popover"]').popover()
 })
 
-$(document).ready(() => {
+$(document).on('turbolinks:load', () => {
     $('.toggle').on('click', (e) => {
         e.stopPropagation();
         e.preventDefault();
