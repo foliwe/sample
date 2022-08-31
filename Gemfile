@@ -22,7 +22,7 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'devise', '= 4.7.1'
-gem 'omniauth', '= 1.9.0'
+gem 'omniauth', '1.9.2'
 gem 'omniauth-facebook', '= 5.0.0'
 
 # Use Active Storage variant
